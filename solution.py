@@ -59,21 +59,6 @@ def extract(file_path):
 
 
 def validate(data):
-    """
-    Task 2: Kiem tra chat luong du lieu.
-
-    Quy tac validation:
-       - Price phai > 0 (loai bo gia am hoac bang 0)
-       - Category khong duoc rong
-
-    Goi y:
-       - Dung record.get('price', 0) de lay gia
-       - Dung record.get('category') de kiem tra category
-       - In ra so luong record hop le va khong hop le
-
-    Returns:
-        list: Danh sach cac records hop le
-    """
     valid_records = []
     error_count = 0
 
@@ -91,7 +76,7 @@ def validate(data):
 
         valid_records.append(record)
 
-    print(f"Validation complete. Valid: {len(valid_records)}, Errors: {error_count}")
+    print(f"Validation summary: {len(valid_records)} valid, {error_count} dropped")
     return valid_records
 
 
